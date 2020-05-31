@@ -1,0 +1,23 @@
+/*
+ Theme Name:   Target MCA
+ Description:  Twenty Fifteen Child Theme for Target MCA
+ Author:       Adarsh Akshat
+ Author URI:   github.com/adarshakshat
+ Theme URI:    https://github.com/adarshakshat/TargetMCA-Child-Theme
+ Template:     twentytwenty
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  twentytwentychild
+*/
+
+.row{
+    margin-left: 0;
+    margin-right: 0;
+}
+.questionlistcontainer{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background: #f1f1f1;
+  }
