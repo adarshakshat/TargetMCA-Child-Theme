@@ -72,13 +72,37 @@ if ( is_singular() ) {
 	</div><!-- .entry-header-inner -->
 
 </header><!-- .entry-header -->
-
-
+<!-- Content Startes -->
 <div class="row justify-content-center">
 	<div class="col-10">
-		<img class="img-fluid" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php echo get_the_title(); ?>"> </img>
+		<img class="img-fluid" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php echo get_the_title(); ?>"> 
 	</div>
 </div>
+
+
+
+
+
+<div class="post-inner <?php echo is_page_template( 'templates/template-full-width.php' ) ? '' : 'thin'; ?> ">
+
+<div class="entry-content">
+
+    <?php
+    if ( is_search() || ! is_singular() && 'summary' === get_theme_mod( 'blog_content', 'full' ) ) {
+        the_excerpt();
+    } else {
+        the_content( __( 'Continue reading', 'twentytwenty' ) );
+    }
+    ?>
+
+
+
+</div><!-- .entry-content -->
+	    
+
+</div><!-- .post-inner -->
+
+
 
 <div class="section-inner">
 <?php

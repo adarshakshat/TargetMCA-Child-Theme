@@ -86,18 +86,23 @@ if ( is_singular() ) {
         the_content( __( 'Continue reading', 'twentytwenty' ) );
     }
     ?>
-    <div class="row justify-content-center">
-        <div class="col-6">
-            <h4 class="answer"> Answer :  <?php $answer = get_post_meta( get_the_ID(), 'answer', true ); echo $answer; ?> </h4> 
-        </div>
-    </div>
+
 
 
 </div><!-- .entry-content -->
+	    
 
 </div><!-- .post-inner -->
 
 <div class="section-inner">
+	 <?php $answer = get_post_meta( get_the_ID(), 'answer', true ); 
+	if($answer!=NULL){?>
+	<div class="row justify-content-center">
+        <div class="col-6">
+            <h4 class="answer"> Answer :  <?php echo $answer; ?> </h4> 
+        </div>
+    </div>
+	<?php } ?>
 <?php
 wp_link_pages(
     array(
