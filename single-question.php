@@ -95,7 +95,10 @@ if ( is_singular() ) {
 </div><!-- .post-inner -->
 
 <div class="section-inner">
-	 <?php $answer = get_post_meta( get_the_ID(), 'answer', true ); 
+	<?php the_post_thumbnail(); ?>
+
+
+	<?php $answer = get_post_meta( get_the_ID(), 'answer', true ); 
 	if($answer!=NULL){?>
 	<div class="row justify-content-center">
         <div class="col-6">
@@ -103,27 +106,27 @@ if ( is_singular() ) {
         </div>
     </div>
 	<?php } ?>
-<?php
-wp_link_pages(
+	<?php
+	wp_link_pages(
     array(
         'before'      => '<nav class="post-nav-links bg-light-background" aria-label="' . esc_attr__( 'Page', 'twentytwenty' ) . '"><span class="label">' . __( 'Pages:', 'twentytwenty' ) . '</span>',
         'after'       => '</nav>',
         'link_before' => '<span class="page-number">',
         'link_after'  => '</span>',
     )
-);
+	);
 
-edit_post_link();
+	edit_post_link();
 
-// Single bottom post meta.
-twentytwenty_the_post_meta( get_the_ID(), 'single-bottom' );
+	// Single bottom post meta.
+	twentytwenty_the_post_meta( get_the_ID(), 'single-bottom' );
 
-if ( post_type_supports( get_post_type( get_the_ID() ), 'author' ) && is_single() ) {
+	if ( post_type_supports( get_post_type( get_the_ID() ), 'author' ) && is_single() ) {
 
     get_template_part( 'template-parts/entry-author-bio' );
 
-}
-?>
+	}
+	?>
 
 </div><!-- .section-inner -->
 
