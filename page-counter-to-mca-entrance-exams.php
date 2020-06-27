@@ -13,9 +13,9 @@ $days_remaining = floor($remaining / 86400);
 ?>
 
 <div class="container text-center">
-<h2> <?php
+<h2> <span style="color:#cd2653;"> <?php
 echo $days_remaining;
-?> Days for Nimcet Exam 
+?> Days</span> for Nimcet Exam 
 
 </h2>
 <? // Counter for MAH MCA Exam
@@ -24,9 +24,9 @@ $remaining = $mahmcadate - time();
 //echo $remaining;
 $days_remaining = floor($remaining / 86400); ?>
 
-<h2> <?php
+<h2><span style="color:#cd2653;"> <?php
 echo $days_remaining;
-?> Days for MAH MCA Exam 
+?> Days</span> for MAH MCA Exam 
 
 </h2>
 
